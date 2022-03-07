@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    </head>
+    <body>
+        <div id="intuit"></div>
+        <script type="text/jsx">
+            const date = new Date().toLocaleString();
+            
+            function today() {
+                return "Monday";
+            }
+
+            const h1 = <h1>{date}</h1>;
+            const message = <h2>Today is {today()}</h2> 
+            const message2 = <h2>{today() === "Monday" ? "OMG" : "Cool"}</h2> 
+
+            
+            const staticList = (<ul>
+                <li>Java</li>
+                <li>Ruby</li>
+                <li>Go</li>
+                <li>TS</li>
+            </ul>);
+
+            const languages = ["Java", "Ruby", "Go", "TS"];
+            function getLanguagesList() {
+                const liElements = [];
+                for(let i = 0; i < languages.length; i++) {
+                    let liElement = <li>{languages[i]}</li>;
+                    liElements.push(liElement);
+                }
+                return liElements;
+            }
+            const list = (<ul>
+                {getLanguagesList()}
+            </ul>);
+
+            ReactDOM.render(list, document.getElementById("intuit"));
+        </script>
+    </body>
+</html>    

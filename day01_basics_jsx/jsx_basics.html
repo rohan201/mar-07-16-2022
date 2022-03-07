@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    </head>
+    <body>
+        <!-- <input type="text"> -->
+        <div id="intuit"></div>    
+        <script type="text/jsx">
+            //JSX has XML like syntax
+            //Very strict;
+            //Every start tag should have a corresponding end tag
+            //Every JSX element should have ONLY ONE root element
+
+            const h1 = <h1>JSX basics</h1>;
+            const textbox1 = <input type="text"></input>;
+            const btn = <button>Click</button>;
+
+            const myForm = (
+                <div>
+                    <h1>JSX basics</h1>
+                    <hr/>
+                    <input type="text"></input> <br/>
+                    <button>Click</button>
+                </div>    
+            );
+
+            ReactDOM.render(myForm, document.getElementById('intuit'));
+        </script>
+    </body>
+</html>    
