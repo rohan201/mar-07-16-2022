@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    </head>
+    <body>
+        <div id="intuit"></div>
+        <!-- NOT RECOMMENDED -->
+        <div id="status"></div> 
+        <script type="text/jsx">
+
+            function login() {
+                let userName = document.getElementById("username").value; //NOT RECOMMENDED
+                let password = document.getElementById("password").value; //NOT RECOMMENDED
+                let message = <h1 style={{color: 'red'}}>Incorrect username or password</h1>;
+
+                if(userName === "admin" && password === "admin123") {
+                    message = <h1 style={{color: 'green'}}>Logging in...</h1>
+                    document.getElementById("loginbtn").disabled = true; //NOT RECOMMENDED
+                }
+                ReactDOM.render(message, document.getElementById("status")); //NOT RECOMMENDED
+            }
+
+            let loginForm = (<div>
+                <input type="text" placeholder="Username" id="username"></input> <br/>
+                <input type="password" placeholder="Password" id="password"></input> <br/>
+                <button id="loginbtn" onClick={login}>Login</button>
+            </div>);
+
+            ReactDOM.render(loginForm, document.getElementById("intuit"));
+        </script>
+    </body>
+</html>    
