@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    </head>
+    <body>
+        <div id="intuit"></div>
+        <script type="text/jsx">
+            //const h1 = React.createElement("h1", null, "Hello React");
+            //JSX is a special syntax for implementing UI in React applications
+            const h1 = <h1>Hello React using JSX</h1>;
+            ReactDOM.render(h1, document.getElementById("intuit"));
+        </script>
+    </body>
+</html>
