@@ -16,3 +16,14 @@
 * Provides a Virtual DOM
 * As an application developer you will write JS code to talk to the Virtual DOM and not the real DOM
 * Component-based development
+
+### Day 01
+
+* JSX is a special syntax for UI
+* XML like strict syntax
+* start tag and corresponding end tag; need to have just one root element
+* JSX expressions within {}
+* Synthetic events onClick, onChange, onFocus; You register the functions
+* Each component is an independently running entity which has its own UI, data and behavior
+* React SPA is made up of components
+* OO approach or Functional approach
