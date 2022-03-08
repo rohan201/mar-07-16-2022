@@ -4,13 +4,21 @@ import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import StateExample from './StateExample';
+import Lab01UsingState from './Lab01UsingState';
 
 function App() {
   return (
     <div>
-      <StateExample/>
+      <Lab01UsingState/>
     </div>
   );
+
+  // return (
+  //   <div>
+  //     <StateExample/>
+  //   </div>
+  // );
+  
   // return (
   //   <div className="App">
   //       <Header/>
