@@ -5,6 +5,51 @@
         <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
     </head>
     <body>
-        
+        <div id="root"></div>
+        <script type="text/jsx">
+            class Header extends React.Component {
+                render() {
+                    return <h1>Day 02</h1>;
+                }
+            }
+
+            class Footer extends React.Component {
+                render() {
+                    return <h4>Copyrights reserved, 2022</h4>
+                }
+            }
+
+            class LoginForm extends React.Component {
+                render() {
+                    return (<div>
+                        <input type="text" placeholder="Username" id="username"></input> <br/>
+                        <input type="password" placeholder="Password" id="password"></input> <br/>
+                        <button id="loginbtn">Login</button>
+                    </div>);
+                }
+            }
+
+            class Main extends React.Component {
+                render() {
+                    return (<div>
+                        <LoginForm/>
+                    </div>);
+                }
+            }
+
+            class App extends React.Component {
+                render() {
+                    return (<div>
+                        <Header/>
+                        <hr/><br/><br/>
+                        <Main/>
+                        <br/><br/><br/><br/><br/><br/><hr/>
+                        <Footer/>
+                    </div>);
+                }
+            }
+            ReactDOM.render(<App/>, document.getElementById("root"));
+
+        </script>
     </body>
 </html>
