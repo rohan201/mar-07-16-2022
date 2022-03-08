@@ -29,6 +29,7 @@ class Lab01UsingState extends Component<{}, ILab01State> {
                 loginSuccess: true,
                 cssMessageClass: 'correct'
             });
+            //document.getElementById("loginbtn").disabled = true;
         } else {
             this.setState({
                 message: 'Incorrect username or password',
@@ -43,7 +44,7 @@ class Lab01UsingState extends Component<{}, ILab01State> {
         return (<div>
             <input type="text" placeholder="Username" id="username"></input> <br/>
             <input type="password" placeholder="Password" id="password"></input> <br/>
-            <button disabled={this.state.loginSuccess} onClick={this.login}>Login</button>
+            <button id="loginbtn" disabled={this.state.loginSuccess} onClick={this.login}>Login</button>
             <h2 className={this.state.cssMessageClass}>{this.state.message}</h2>
         </div>);
     }
