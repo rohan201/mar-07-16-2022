@@ -27,3 +27,18 @@
 * Each component is an independently running entity which has its own UI, data and behavior
 * React SPA is made up of components
 * OO approach or Functional approach
+
+### CRA
+
+* sudo npm i -g create-react-app
+* sudo create-react-app day02-app --template typescript
+* sudo npm start or sudo yarn start
+
+
+[proj]
+    package.json
+
+proj> sudo yarn install    
+
+
+
