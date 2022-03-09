@@ -19,7 +19,7 @@ class Lab01UsingState extends Component<{}, ILab01State> {
     }
     login() {
         let userNameElem: any = document.getElementById("username");
-        let userName = userNameElem != null ? userNameElem?.value : ''; //NOT RECOMMENDED
+        let userName = userNameElem != null ? userNameElem.value : ''; //NOT RECOMMENDED
         let passwordElem: any = document.getElementById("password");
         let password = passwordElem != null ? passwordElem.value : ''; //NOT RECOMMENDED
 

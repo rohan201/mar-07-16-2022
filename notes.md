@@ -34,11 +34,22 @@
 * sudo create-react-app day02-app --template typescript
 * sudo npm start or sudo yarn start
 
-
+```
 [proj]
     package.json
 
 proj> sudo yarn install    
+```
+
+### Day 02
+
+* Every component maintains data that is represented as state
+* You define a state ie., the properties you want to store; In TS use interface to define the state
+* Initialize the state using __this.state__
+* You modify the state on UI actions using __this.setState({})__
+* State data is bound to UI using JSX expressions __{this.state.xyz}__
+* Modifying the state triggers a call to the __render()__ method
+* You want to manipulate the UI of the component, manipulate the state of the component
 
 
 
