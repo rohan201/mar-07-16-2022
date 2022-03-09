@@ -21,39 +21,43 @@ class StateExampleWithInput extends Component<{}, IStateExample> {
     }
 
     waUpdateChanged(e: any) {
-        let value = e.currentTarget.checked;
+        //let value = e.currentTarget.checked;
+        let subscribedToWhatsAppUpdates = e.currentTarget.checked;
         this.setState({
-            subscribedToWhatsAppUpdates: value
+            subscribedToWhatsAppUpdates
         });
     }
 
     buttonClicked() {
-        let waSubscription = this.state.subscribedToWhatsAppUpdates;
-        let message = `Hi ${this.state.name}!`;
-        if(waSubscription) {
+        //let waSubscription = this.state.subscribedToWhatsAppUpdates;
+        let {subscribedToWhatsAppUpdates, name} = this.state;
+        let message = `Hi ${name}!`;
+        if(subscribedToWhatsAppUpdates) {
             message += ' You will receive updates on WhatsApp';
         }
         this.setState({
-            //message: message
             message
         });
     }
 
     nameChanged(e: any) {
         console.log(e);
-        let currentValue = e.currentTarget.value;
+        //let currentValue = e.currentTarget.value;
+        let name = e.currentTarget.value;
         this.setState({
-            name: currentValue
+            //name: currentValue
+            name
         });
     }
 
     render() {
+        let {title, message} = this.state;
         return (<div>
-            <h1>{this.state.title}</h1>
+            <h1>{title}</h1>
             <input type="text" placeholder="Name" onChange={this.nameChanged}></input> <br/>
             <input type="checkbox" onChange={this.waUpdateChanged}></input><label>You want receive WhatsApp updates</label> <br/><br/>
             <button onClick={this.buttonClicked}>Click</button>
-            <h3>{this.state.message}</h3>
+            <h3>{message}</h3>
         </div>);
     }
 }
