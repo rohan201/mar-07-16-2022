@@ -17,7 +17,8 @@ class Lab02 extends Component<{}, ILab02State> {
     playButtonClicked() {
         let { guess, game } = this.state;
         game.play(guess);
-        this.setState({ game });
+        this.setState({}); //You need to call this to refresh UI 
+        //this.render(); //BAD PRACTICE
     }
 
     guessChanged(e: React.ChangeEvent<HTMLInputElement>) {
