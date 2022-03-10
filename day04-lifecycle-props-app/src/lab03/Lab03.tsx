@@ -17,20 +17,34 @@ export class Lab03 extends Component<{}, ILab03State> {
         if(localStorage.getItem("countries")) {
             countries = JSON.parse(localStorage.getItem("countries") || "");
             countries = countries as Country[]; //Typecase in TS
+            this.setState({
+                countries
+            });
         } else {
             //Ideally load from server
-            countries = [
-                new Country("India", [new City("Pune"), new City("Bengaluru"), new City("Chennai")]),
-                new Country("England", [new City("London"), new City("Bristol"), new City("Cambridge")]),
-                new Country("US", [new City("Houston"), new City("NJ"), new City("Dallas")])
-            ];
-            localStorage.setItem("countries", JSON.stringify(countries));
+            fetch('/data.json')
+                .then(response => response.json())
+                .then(response => {
+                    console.log(response);
+                    countries = JSON.parse(response.countries || "");
+                    countries = countries as Country[];
+                    this.setState({
+                        countries
+                    });
+                    localStorage.setItem("countries", response);
+                })
+                .catch(error => console.log(error));
+
+            // countries = [
+            //     new Country("India", [new City("Pune"), new City("Bengaluru"), new City("Chennai")]),
+            //     new Country("England", [new City("London"), new City("Bristol"), new City("Cambridge")]),
+            //     new Country("US", [new City("Houston"), new City("NJ"), new City("Dallas")])
+            // ];
+            // localStorage.setItem("countries", JSON.stringify(countries));
         }
         
-        this.setState({
-            countries
-        });
-        this.countryChanged = this.countryChanged.bind(this);
+       
+        this.countryChanged = this.countryChanged.bind(this); //WILL EXPLAIN LATER
     }
 
     countryChanged(e: React.ChangeEvent<HTMLSelectElement>) {

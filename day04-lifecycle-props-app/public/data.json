@@ -1,0 +1,44 @@
+[
+    {
+        "name": "India",
+        "cities": [
+            {
+                "name": "Pune"
+            },
+            {
+                "name": "Bengaluru"
+            },
+            {
+                "name": "Chennai"
+            }
+        ]
+    },
+    {
+        "name": "England",
+        "cities": [
+            {
+                "name": "London"
+            },
+            {
+                "name": "Bristol"
+            },
+            {
+                "name": "Cambridge"
+            }
+        ]
+    },
+    {
+        "name": "US",
+        "cities": [
+            {
+                "name": "Houston"
+            },
+            {
+                "name": "NJ"
+            },
+            {
+                "name": "Dallas"
+            }
+        ]
+    }
+]
