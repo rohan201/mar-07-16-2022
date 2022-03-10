@@ -1,11 +1,11 @@
 # Lifecycle of a component in React
 
-* Create __LifeCycle.js__ file
+* Create __LifeCycle.tsx__ file
 * Create a Lifecycle component with a button and label. Clicking the button will display the current time in the label. You can use the following code.
 
 ```typescript
-    class Lifecycle extends Component {
-        constructor(props) {
+    class Lifecycle extends Component<{}, {message: string}> {
+        constructor(props: {}) {
             super(props);
             this.state = {
               message: ''  
