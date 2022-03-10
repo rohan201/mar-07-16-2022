@@ -52,4 +52,13 @@ proj> sudo yarn install
 * You want to manipulate the UI of the component, manipulate the state of the component
 
 
+### Day 03
 
+* Accessing input control values using onChange event
+* Store the values in a state
+* Externalize the logic into a separate class and store its instance in the state
+* Component's job is to accept input from the user and delegate the work to other classes
+* Every time you call __setState()__ method, virtual DOM is created
+* Current Virtual DOM is compared with the previous Virtual DOM for any changes
+* If there are any changes, the previous one is discarded and the changes are flushed out to the real DOM tree
+* If there are no changes, the current Virtual DOM is discarded
