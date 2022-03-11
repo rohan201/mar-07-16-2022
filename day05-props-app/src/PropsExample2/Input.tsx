@@ -1,18 +1,22 @@
 import { Component } from "react";
 
-export class Input extends Component<{}> {
-    constructor(props: {}) {
+interface IInputProps {
+    timeHandler: () => void;
+}
+
+export class Input extends Component<IInputProps> {
+    constructor(props: IInputProps) {
         super(props);
-        this.getTime = this.getTime.bind(this);
+        this.getTimeButtonClicked = this.getTimeButtonClicked.bind(this);
     }
 
-    getTime() {
-
+    getTimeButtonClicked() {
+        this.props.timeHandler();
     }
-    
+
     render() {
         return (<div>
-            <button onClick={this.getTime}>Get time</button>
+            <button onClick={this.getTimeButtonClicked}>Get time</button>
         </div>);
     }
 }
