@@ -62,3 +62,11 @@ proj> sudo yarn install
 * Current Virtual DOM is compared with the previous Virtual DOM for any changes
 * If there are any changes, the previous one is discarded and the changes are flushed out to the real DOM tree
 * If there are no changes, the current Virtual DOM is discarded
+
+### Day 04
+
+* asynchronous nature of setState()
+* If you want to execute something after the state is updated pass it as callback function in the setState() method
+* Lifecycle methods of component; __componentDidMount__, __componentDidUpdate__
+* You can ignore state updation by overriding __shouldComponentUpdate__ method
+* If you want to externalize the states of all the components into a common place, you can use __Redux__
