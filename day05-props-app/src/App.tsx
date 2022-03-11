@@ -1,4 +1,4 @@
-import { Parent } from "./PropsExample2/Parent";
+import { Parent } from "./PropsExample3WithTextbox/Parent";
 
 export function App() {
     return (<div>
