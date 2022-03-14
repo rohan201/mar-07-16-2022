@@ -8,7 +8,7 @@ interface IPeopleDisplayProps {
 
 export class PeopleDisplay extends Component<IPeopleDisplayProps> {
     private peopleSelectedForRemoval: Person[]
-    
+
     constructor(props: IPeopleDisplayProps) {
         super(props);
         this.peopleSelectedForRemoval = [];
@@ -24,7 +24,7 @@ export class PeopleDisplay extends Component<IPeopleDisplayProps> {
     }
 
     getPeopleRows() {
-        let { people } = this.props;
+        let { people } = this.props; //let people = this.props.people;
         let peopleInJsx: any = [];
         peopleInJsx = people.map(it => <tr key={`${it.name}_${it.country}`}>
             <td>{it.name}</td>
