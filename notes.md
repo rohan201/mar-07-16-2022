@@ -70,3 +70,12 @@ proj> sudo yarn install
 * Lifecycle methods of component; __componentDidMount__, __componentDidUpdate__
 * You can ignore state updation by overriding __shouldComponentUpdate__ method
 * If you want to externalize the states of all the components into a common place, you can use __Redux__
+
+### Day 05
+* You pass data into components using attributes __key="value"__
+* Access those values as __props__ inside the component
+* You define the props
+* Access them using __this.props.xyz__
+* Props are readonly (atleast in TS world); Doesn't really make sense to change the properties
+* If you want two components to talk to each other have a parent(acts like a mediator) component that will contain the two components
+* You can pass plain data as props and also function references as props
