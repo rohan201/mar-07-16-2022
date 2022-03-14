@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { getTextOfJSDocComment } from "typescript";
 
 interface IPersonFormProps {
     addHandler: (name: string, country: string) => boolean
@@ -27,6 +28,10 @@ export class PersonForm extends Component<IPersonFormProps, {message: string}> {
         } else {
             this.setState({ message: 'Person already found' });
         }
+    }
+    
+    nameChanged() {
+        //this.props.parentMethod(e.currentTarget.value);
     }
 
     render() {
