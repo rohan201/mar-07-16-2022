@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 export const StateHookExample = () => {
+    console.log("StateHookExample function called");
+
     const [currentTime, setCurrentTime] =  useState<string>('');
     const [temperature, setTemperature] = useState<string>('');
     const [stockPrice, setStockPrice] = useState<number>(100.02);
@@ -10,7 +12,7 @@ export const StateHookExample = () => {
         setCurrentTime(now);
     };
 
-    const getTemperatureButtonClicked = () => {
+    const getTemperatureButtonClicked = function() {
         let temp = Math.random() * 100;
         setTemperature(temp + '');
     };
