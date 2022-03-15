@@ -6,19 +6,25 @@ import { Footer } from './Footer';
 import { StateHookExample } from './StateHookExample';
 import { StateHookExample2 } from './StateHookExample2';
 import { Lab05 } from './Lab05';
+import { EffectHookExample } from './EffectHookExample';
 
 function App() {
   return (
+
     <div className="App">
-        <Header title='Function component'/>
-        <hr/>
-        <Lab05/>
-        <hr/>
-        <StateHookExample2/> 
-        <hr/>
-        <br/><br/><br/><br/>
-        <Footer year={2021}/>
+        <EffectHookExample/>
     </div>
+
+    // <div className="App">
+    //     <Header title='Function component'/>
+    //     <hr/>
+    //     <Lab05/>
+    //     <hr/>
+    //     <StateHookExample2/> 
+    //     <hr/>
+    //     <br/><br/><br/><br/>
+    //     <Footer year={2021}/>
+    // </div>
   );
 }
 
