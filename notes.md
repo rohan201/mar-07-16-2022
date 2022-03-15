@@ -79,3 +79,12 @@ proj> sudo yarn install
 * Props are readonly (atleast in TS world); Doesn't really make sense to change the properties
 * If you want two components to talk to each other have a parent(acts like a mediator) component that will contain the two components
 * You can pass plain data as props and also function references as props
+
+
+### Day 06
+
+* __bind__. The event handlers get executed outside the context of the component. 
+* You have to bind the method with the component's context
+* bind explicitly in a constructor or inline with event handler or use arrow functions
+* __React.createRef()__ to bind the reference of an UI element to a variable
+* Using the ref you can access the current instance of the UI element and manipulate it
