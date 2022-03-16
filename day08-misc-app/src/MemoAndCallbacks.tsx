@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from "react";
 import { City } from "./City";
 
 export const MemoAndCallbacksExample = () => {
-    
+    const i = 10;
     const[puneTemperature, setPuneTemperature] = useState<number>(0);
     const[chennaiTemperature, setChennaiTemperature] = useState<number>(0);
 
@@ -12,7 +12,7 @@ export const MemoAndCallbacksExample = () => {
     //punetemperature is 50 fn {}
     const fetchPuneTemperatureButtonClicked = useCallback(() => {
         setPuneTemperature(Math.random() * 50);
-    }, [puneTemperature]);
+    }, [puneTemperature, i]);
 
     const fetchChennaiTemperatureButtonClicked = useCallback(() => {
         setChennaiTemperature(Math.random() * 50);
