@@ -6,7 +6,7 @@ import { Lab06 } from './lab06/Lab06';
 function App() {
   return (
     <div className="App">
-      <Lab06/>
+      
     </div>
   );
 }
