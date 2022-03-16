@@ -88,3 +88,9 @@ proj> sudo yarn install
 * bind explicitly in a constructor or inline with event handler or use arrow functions
 * __React.createRef()__ to bind the reference of an UI element to a variable
 * Using the ref you can access the current instance of the UI element and manipulate it
+
+### Day 07
+
+* React Hooks
+* In a functional components hooks are means of plugging in functionalities
+* useState, useRef, useEffect(__componentDidMount, componentDidUpdate__)
